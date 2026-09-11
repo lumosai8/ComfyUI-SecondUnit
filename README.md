@@ -2,7 +2,7 @@
 
 A free ComfyUI custom node that connects ComfyUI straight to DaVinci Resolve.
 Send images, video, audio, and subtitles back and forth with no manual
-exporting and importing — all from inside your workflow.
+exporting and importing, all from inside your workflow.
 
 Grab a frame off your timeline, run it through any model you like, and send
 the result back to the media pool or straight onto the timeline at the frame
@@ -15,7 +15,7 @@ ComfyUI's Python version doesn't matter.
 
 ## What it does
 
-- **Images, video, audio, subtitles — both directions.** Any workflow can take
+- **Images, video, audio, subtitles, both directions.** Any workflow can take
   Resolve as input and Resolve as output once you add a Grab node at the start
   and a Send node at the end.
 - **AI transitions and animations.** Grab the two sides of a cut, feed them to
@@ -25,7 +25,7 @@ ComfyUI's Python version doesn't matter.
   **Timeline** (at the playhead), and **Graph** (drop a loader onto the canvas)
   buttons.
 - **Music and voice.** Generate tracks with ComfyUI's own audio workflows,
-  save them into the library, and drop them on the timeline — or grab timeline
+  save them into the library, and drop them on the timeline. Or grab timeline
   audio back into a workflow.
 - **Auto-subtitles.** Wire the `srt` output of a transcription node into
   **Send to Resolve** and captions land on a subtitle track, synced to the
@@ -77,15 +77,15 @@ instead of re-grabbing. Press the button again only when you want fresh media.
 | **Grab Frames from Resolve** | *Grab the cut* · *Grab into first / last* · *Upload into first / last* | one still, or the pair either side of a cut |
 | **Grab Audio from Resolve** | *Grab the audio* | one clip off the timeline, or the whole mix |
 | **Grab Video from Resolve** | *Grab the video* | one video clip off the timeline, as mp4 |
-| **Load Timeline Audio from Resolve** | — | the whole mix, re-read on every run |
-| **Resolve Timeline Info** | — | fps, size, playhead, and every cut, numbered |
+| **Load Timeline Audio from Resolve** | none | the whole mix, re-read on every run |
+| **Resolve Timeline Info** | none | fps, size, playhead, and every cut, numbered |
 
 **Out**
 
 | Node | Button | Does |
 |---|---|---|
 | **Send to Resolve** | *Send to Resolve* | saves picture / video / sound / subtitles and imports them |
-| **Import File into Resolve** | — | any file already on disk; pairs with ComfyUI's own Save nodes |
+| **Import File into Resolve** | none | any file already on disk; pairs with ComfyUI's own Save nodes |
 
 `second frame` on **Grab Frames from Resolve** decides the shape: off is a
 plain one-picture loader, on is a first/last pair for video models. Each slot
@@ -101,8 +101,8 @@ The `place` menu decides where it lands: `media pool only`, `at the playhead`,
 ## The library, and sending files to Resolve
 
 Open **Second Unit** in the top bar and point it at a folder (e.g. a new
-`Library` folder on your drive). Anything you drop in there — music, sound
-effects, voice-overs, video — shows up for preview. Rename tracks, organise
+`Library` folder on your drive). Anything you drop in there shows up for
+preview: music, sound effects, voice-overs, video. Rename tracks, organise
 into subfolders; the folders on disk are the truth, so files copied in from
 outside simply appear.
 
@@ -117,7 +117,7 @@ the playhead). It shows up instantly.
    press *Grab the cut* to take the last frame of the outgoing clip and the
    first frame of the incoming one in one go.
 2. Run your model (image-to-video for transitions, upscalers, background
-   removal, lip-sync — anything).
+   removal, lip-sync, anything).
 3. Replace the Save node with **Send to Resolve**. For bridging a cut pick
    `at the cut it came from` (or wire `cut duration` into your animation
    length and `seconds` with `at a time`) so the clip fills the exact gap.
@@ -128,7 +128,7 @@ the playhead). It shows up instantly.
   Suite), feed it audio, and connect its `srt` output to **Send to Resolve**.
   Captions land on a subtitle track; a track is added if there is none. Since
   Resolve's API cannot position subtitle clips, `place` is honoured by
-  shifting the timecodes before import — wire **Grab Audio**'s `seconds` into
+  shifting the timecodes before import. Wire **Grab Audio**'s `seconds` into
   `seconds` with `at a time` to put a clip's transcript back over that clip.
 - **Grab audio:** park on a clip and press *Grab the audio* to pull that
   clip's sound (same duration) into ComfyUI, or take the whole-timeline mix.
@@ -157,11 +157,11 @@ Each carries a note saying which models it needs and where the files go.
 - Positioned placement only lands in **free space**; on an occupied frame the
   clip is appended at the end and the node says so.
 - A fully hosted (browser-only cloud) ComfyUI cannot reach your Resolve. Local
-  ComfyUI using cloud API nodes works fine — the save node is what must be
-  local.
+  ComfyUI using cloud API nodes works fine, because the save node is what must
+  be local.
 - Run only one tool that scripts Resolve at a time. A second process holding a
   scripting connection throttles every call (~1/sec for everyone).
 
 ## Licence
 
-MIT. Free forever — similar bridges sell for $50+, this one stays free.
+MIT. Free forever. Similar bridges sell for $50+, this one stays free.
