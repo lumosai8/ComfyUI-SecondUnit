@@ -321,18 +321,6 @@ app.registerExtension({
       };
 
       // --- the preview player -------------------------------------------
-
-      const set = (name, value) => {
-        const w = widget(name);
-        if (!w) return;
-        if (w.options && Array.isArray(w.options.values) && !w.options.values.includes(value)) {
-          w.options.values.unshift(value);
-        }
-        w.value = value;
-        w.callback?.(value);
-      };
-
-      // --- the preview player -------------------------------------------
       // Reuse one player across grabs; adding a widget per grab would grow
       // the node forever.
       const viewURL = (value) => {
