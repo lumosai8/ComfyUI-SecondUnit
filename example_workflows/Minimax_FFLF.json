@@ -867,7 +867,7 @@
               100
             ],
             "flags": {},
-            "order": 8,
+            "order": 6,
             "mode": 0,
             "inputs": [
               {
@@ -927,7 +927,7 @@
               100
             ],
             "flags": {},
-            "order": 14,
+            "order": 12,
             "mode": 0,
             "inputs": [
               {
@@ -988,7 +988,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 13,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -1039,7 +1039,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 7,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -1130,7 +1130,7 @@
               150
             ],
             "flags": {},
-            "order": 6,
+            "order": 4,
             "mode": 0,
             "inputs": [
               {
@@ -1192,7 +1192,7 @@
               390
             ],
             "flags": {},
-            "order": 10,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -1266,7 +1266,7 @@
               80
             ],
             "flags": {},
-            "order": 12,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -1315,7 +1315,7 @@
               150
             ],
             "flags": {},
-            "order": 9,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -1378,7 +1378,7 @@
               90
             ],
             "flags": {},
-            "order": 11,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -1432,7 +1432,7 @@
               140
             ],
             "flags": {},
-            "order": 15,
+            "order": 13,
             "mode": 0,
             "inputs": [
               {
@@ -1492,7 +1492,7 @@
               550
             ],
             "flags": {},
-            "order": 16,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
@@ -1613,7 +1613,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 17,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -1682,7 +1682,7 @@
               90
             ],
             "flags": {},
-            "order": 18,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -1735,7 +1735,7 @@
               110
             ],
             "flags": {},
-            "order": 20,
+            "order": 18,
             "mode": 0,
             "inputs": [
               {
@@ -1803,7 +1803,7 @@
               110
             ],
             "flags": {},
-            "order": 21,
+            "order": 19,
             "mode": 0,
             "inputs": [
               {
@@ -1914,7 +1914,7 @@
               90
             ],
             "flags": {},
-            "order": 22,
+            "order": 20,
             "mode": 0,
             "inputs": [
               {
@@ -1968,7 +1968,7 @@
               90
             ],
             "flags": {},
-            "order": 23,
+            "order": 21,
             "mode": 0,
             "inputs": [
               {
@@ -2070,7 +2070,7 @@
               371.296875
             ],
             "flags": {},
-            "order": 24,
+            "order": 22,
             "mode": 0,
             "inputs": [
               {
@@ -2102,101 +2102,6 @@
             "widgets_values_named": {}
           },
           {
-            "id": 130,
-            "type": "SecondUnitPrompt",
-            "pos": [
-              -1683.7529907226562,
-              4180.447591145833
-            ],
-            "size": [
-              400,
-              296
-            ],
-            "flags": {},
-            "order": 25,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 249
-              },
-              {
-                "localized_name": "first_image",
-                "name": "first_image",
-                "shape": 7,
-                "type": "IMAGE",
-                "link": 252
-              },
-              {
-                "localized_name": "last_image",
-                "name": "last_image",
-                "shape": 7,
-                "type": "IMAGE",
-                "link": 258
-              },
-              {
-                "localized_name": "idea",
-                "name": "idea",
-                "type": "STRING",
-                "widget": {
-                  "name": "idea"
-                },
-                "link": 259
-              },
-              {
-                "localized_name": "duration",
-                "name": "duration",
-                "shape": 7,
-                "type": "FLOAT",
-                "widget": {
-                  "name": "duration"
-                },
-                "link": 251
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "prompt",
-                "name": "prompt",
-                "type": "STRING",
-                "links": [
-                  248,
-                  253
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "SecondUnitPrompt",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "input_ue_unconnectable": {},
-                "version": "7.8"
-              }
-            },
-            "widgets_values": [
-              "minimax",
-              "first and last frame",
-              "a woman jumps and floats in the sky",
-              5,
-              937273791821187,
-              "randomize",
-              512,
-              0.7
-            ],
-            "widgets_values_named": {
-              "model": "minimax",
-              "mode": "first and last frame",
-              "idea": "a woman jumps and floats in the sky",
-              "duration": 5,
-              "seed": 937273791821187,
-              "control_after_generate": "randomize",
-              "max_length": 512,
-              "temperature": 0.7
-            }
-          },
-          {
             "id": 6,
             "type": "UNETLoader",
             "pos": [
@@ -2208,7 +2113,7 @@
               120
             ],
             "flags": {},
-            "order": 5,
+            "order": 3,
             "mode": 0,
             "inputs": [
               {
@@ -2272,7 +2177,7 @@
             "flags": {
               "collapsed": true
             },
-            "order": 3,
+            "order": 24,
             "mode": 0,
             "inputs": [
               {
@@ -2293,14 +2198,14 @@
               }
             ],
             "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.35.0",
+              "Node name for S&R": "ModelAttentionBackend",
               "ue_properties": {
                 "widget_ue_connectable": {},
                 "input_ue_unconnectable": {},
                 "version": "7.8"
-              },
-              "cnr_id": "comfy-core",
-              "ver": "0.35.0",
-              "Node name for S&R": "ModelAttentionBackend"
+              }
             },
             "widgets_values": [
               "comfy kitchen attention"
@@ -2321,7 +2226,7 @@
               130
             ],
             "flags": {},
-            "order": 19,
+            "order": 17,
             "mode": 0,
             "inputs": [
               {
@@ -2399,7 +2304,7 @@
             "flags": {
               "collapsed": true
             },
-            "order": 3,
+            "order": 25,
             "mode": 0,
             "inputs": [
               {
@@ -2420,20 +2325,115 @@
               }
             ],
             "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.35.0",
+              "Node name for S&R": "ModelAttentionBackend",
               "ue_properties": {
                 "widget_ue_connectable": {},
                 "input_ue_unconnectable": {},
                 "version": "7.8"
-              },
-              "cnr_id": "comfy-core",
-              "ver": "0.35.0",
-              "Node name for S&R": "ModelAttentionBackend"
+              }
             },
             "widgets_values": [
               "comfy kitchen attention"
             ],
             "widgets_values_named": {
               "attention": "comfy kitchen attention"
+            }
+          },
+          {
+            "id": 130,
+            "type": "SecondUnitPrompt",
+            "pos": [
+              -1683.7529907226562,
+              4180.447591145833
+            ],
+            "size": [
+              400,
+              296
+            ],
+            "flags": {},
+            "order": 23,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 249
+              },
+              {
+                "localized_name": "first_image",
+                "name": "first_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 252
+              },
+              {
+                "localized_name": "last_image",
+                "name": "last_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 258
+              },
+              {
+                "localized_name": "idea",
+                "name": "idea",
+                "type": "STRING",
+                "widget": {
+                  "name": "idea"
+                },
+                "link": 259
+              },
+              {
+                "localized_name": "duration",
+                "name": "duration",
+                "shape": 7,
+                "type": "FLOAT",
+                "widget": {
+                  "name": "duration"
+                },
+                "link": 251
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  248,
+                  253
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "SecondUnitPrompt",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              "minimax",
+              "first and last frame",
+              "a woman jumps and floats in the sky",
+              5,
+              937273791821187,
+              "fixed",
+              512,
+              0.7
+            ],
+            "widgets_values_named": {
+              "model": "minimax",
+              "mode": "first and last frame",
+              "idea": "a woman jumps and floats in the sky",
+              "duration": 5,
+              "seed": 937273791821187,
+              "control_after_generate": "fixed",
+              "max_length": 512,
+              "temperature": 0.7
             }
           }
         ],
@@ -2918,10 +2918,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 1.1392185512326976,
+      "scale": 1.2531404063559675,
       "offset": [
-        2142.1750942688313,
-        -4052.558084050966
+        2298.889234376613,
+        -4080.912585854489
       ]
     }
   },

@@ -1188,79 +1188,6 @@
       }
     },
     {
-      "id": 147,
-      "type": "SecondUnitPrompt",
-      "pos": [
-        -21.599526418390205,
-        5955.139242353638
-      ],
-      "size": [
-        469.78154862515066,
-        539.7645136751116
-      ],
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 292
-        },
-        {
-          "name": "first_image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 295
-        },
-        {
-          "name": "last_image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "prompt",
-          "type": "STRING",
-          "links": [
-            296
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SecondUnitPrompt",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "minimax",
-        "text to video",
-        " the woman advertises the watch ",
-        5,
-        15085422141989,
-        "randomize",
-        512,
-        0.7
-      ],
-      "widgets_values_named": {
-        "model": "minimax",
-        "mode": "text to video",
-        "idea": " the woman advertises the watch ",
-        "duration": 5,
-        "seed": 15085422141989,
-        "control_after_generate": "randomize",
-        "max_length": 512,
-        "temperature": 0.7
-      },
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 117,
       "type": "MarkdownNote",
       "pos": [
@@ -1668,14 +1595,14 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.0",
+        "Node name for S&R": "ModelAttentionBackend",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.8"
-        },
-        "cnr_id": "comfy-core",
-        "ver": "0.35.0",
-        "Node name for S&R": "ModelAttentionBackend"
+        }
       },
       "widgets_values": [
         "comfy kitchen attention"
@@ -1717,14 +1644,14 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.0",
+        "Node name for S&R": "ModelAttentionBackend",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.8"
-        },
-        "cnr_id": "comfy-core",
-        "ver": "0.35.0",
-        "Node name for S&R": "ModelAttentionBackend"
+        }
       },
       "widgets_values": [
         "comfy kitchen attention"
@@ -1788,6 +1715,79 @@
         "lora_name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
         "strength_model": 1
       }
+    },
+    {
+      "id": 147,
+      "type": "SecondUnitPrompt",
+      "pos": [
+        -21.599526418390205,
+        5955.139242353638
+      ],
+      "size": [
+        469.78154862515066,
+        539.7645136751116
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 292
+        },
+        {
+          "name": "first_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 295
+        },
+        {
+          "name": "last_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            296
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SecondUnitPrompt",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "minimax",
+        "text to video",
+        " the woman advertises the watch ",
+        5,
+        15085422141989,
+        "fixed",
+        512,
+        0.7
+      ],
+      "widgets_values_named": {
+        "model": "minimax",
+        "mode": "text to video",
+        "idea": " the woman advertises the watch ",
+        "duration": 5,
+        "seed": 15085422141989,
+        "control_after_generate": "fixed",
+        "max_length": 512,
+        "temperature": 0.7
+      },
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -2181,10 +2181,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7735600977653637,
+      "scale": 1.0296084901256994,
       "offset": [
-        2619.936043653559,
-        -4504.405802603639
+        853.6357755465273,
+        -5903.486761663741
       ]
     },
     "frontendVersion": "1.51.10",

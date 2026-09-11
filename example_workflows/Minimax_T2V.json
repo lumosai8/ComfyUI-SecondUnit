@@ -2009,101 +2009,6 @@
             "widgets_values_named": {}
           },
           {
-            "id": 130,
-            "type": "SecondUnitPrompt",
-            "pos": [
-              -1683.7529907226562,
-              4180.447591145833
-            ],
-            "size": [
-              400,
-              296
-            ],
-            "flags": {},
-            "order": 23,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 249
-              },
-              {
-                "localized_name": "first_image",
-                "name": "first_image",
-                "shape": 7,
-                "type": "IMAGE",
-                "link": 252
-              },
-              {
-                "localized_name": "last_image",
-                "name": "last_image",
-                "shape": 7,
-                "type": "IMAGE",
-                "link": 258
-              },
-              {
-                "localized_name": "idea",
-                "name": "idea",
-                "type": "STRING",
-                "widget": {
-                  "name": "idea"
-                },
-                "link": 259
-              },
-              {
-                "localized_name": "duration",
-                "name": "duration",
-                "shape": 7,
-                "type": "FLOAT",
-                "widget": {
-                  "name": "duration"
-                },
-                "link": 251
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "prompt",
-                "name": "prompt",
-                "type": "STRING",
-                "links": [
-                  248,
-                  253
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "SecondUnitPrompt",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "input_ue_unconnectable": {},
-                "version": "7.8"
-              }
-            },
-            "widgets_values": [
-              "minimax",
-              "image to video",
-              "a woman jumps and floats in the sky",
-              5,
-              460429069633620,
-              "randomize",
-              512,
-              0.7
-            ],
-            "widgets_values_named": {
-              "model": "minimax",
-              "mode": "image to video",
-              "idea": "a woman jumps and floats in the sky",
-              "duration": 5,
-              "seed": 460429069633620,
-              "control_after_generate": "randomize",
-              "max_length": 512,
-              "temperature": 0.7
-            }
-          },
-          {
             "id": 6,
             "type": "UNETLoader",
             "pos": [
@@ -2341,6 +2246,101 @@
             ],
             "widgets_values_named": {
               "attention": "comfy kitchen attention"
+            }
+          },
+          {
+            "id": 130,
+            "type": "SecondUnitPrompt",
+            "pos": [
+              -1683.7529907226562,
+              4180.447591145833
+            ],
+            "size": [
+              400,
+              296
+            ],
+            "flags": {},
+            "order": 23,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 249
+              },
+              {
+                "localized_name": "first_image",
+                "name": "first_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 252
+              },
+              {
+                "localized_name": "last_image",
+                "name": "last_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 258
+              },
+              {
+                "localized_name": "idea",
+                "name": "idea",
+                "type": "STRING",
+                "widget": {
+                  "name": "idea"
+                },
+                "link": 259
+              },
+              {
+                "localized_name": "duration",
+                "name": "duration",
+                "shape": 7,
+                "type": "FLOAT",
+                "widget": {
+                  "name": "duration"
+                },
+                "link": 251
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  248,
+                  253
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "SecondUnitPrompt",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              "minimax",
+              "image to video",
+              "a woman jumps and floats in the sky",
+              5,
+              460429069633620,
+              "fixed",
+              512,
+              0.7
+            ],
+            "widgets_values_named": {
+              "model": "minimax",
+              "mode": "image to video",
+              "idea": "a woman jumps and floats in the sky",
+              "duration": 5,
+              "seed": 460429069633620,
+              "control_after_generate": "fixed",
+              "max_length": 512,
+              "temperature": 0.7
             }
           }
         ],
@@ -2825,10 +2825,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 1.037539623455529,
+      "scale": 1.2531404063559675,
       "offset": [
-        2086.902728433617,
-        -4554.865806152131
+        2187.4533736521107,
+        -4167.859430946813
       ]
     }
   },
