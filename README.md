@@ -142,11 +142,15 @@ browser):
 
 | | |
 |---|---|
-| `01-round-trip` | Grab a frame, send it straight back. No models. |
-| `02-bridge-a-cut` | Both sides of a cut, wired to land back in the gap. |
-| `03-timeline-audio` | The timeline's audio, mixed down. No models. |
-| `04-timeline-info` | What is on the timeline, and where the cuts are. No models. |
-| `05-picture-to-resolve` | Text-to-image straight into your media pool. |
+| `Minimax_FFLF` | First and last frame video with Minimax, lands back in the gap. |
+| `Minimax_I2V` | Image to video with Minimax, straight to Resolve. |
+| `Minimax_T2V` | Text to video with Minimax, straight to Resolve. |
+| `LTX_FFLF` | First and last frame video with LTXV, lands back in the gap. |
+| `LTX_I2V` | Image to video with LTXV, straight to Resolve. |
+| `LTX_T2V` | Text to video with LTXV, straight to Resolve. |
+| `Flux2_Klein_ImageEdit` | Image edit with Flux2 Klein, straight to Resolve. |
+| `Qwen3_TTS` | Text to speech voice-over, straight to Resolve. |
+| `SRT` | Transcribe audio and send subtitles to the timeline. |
 
 Each carries a note saying which models it needs and where the files go.
 
