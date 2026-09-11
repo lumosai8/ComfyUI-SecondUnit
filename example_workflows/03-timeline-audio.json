@@ -1,0 +1,114 @@
+{
+  "last_node_id": 3,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Note",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        640,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Timeline audio\n==============\nSound off the open Resolve timeline. Press \"Grab the audio\" on the node \u2014\nnothing happens when the workflow runs, so you can iterate against the\nsame take.\n\nwhat\n----\n  the clip at the playhead   just that one clip. Usually what you want,\n                             and it takes about a second.\n  the whole timeline         every audio track mixed into one. Right for\n                             transcribing an edit, wrong for feeding a\n                             model, which then gets music and dialogue\n                             at once.\n  a clip by index            clip number `clip_index` on track `track`.\n\ntrack 0 means whichever enabled audio track has a clip under the\nplayhead, A1 first.\n\nThe waveform drawn on the node is there so you can see at a glance that\nyou did not grab silence.\n\nModels needed\n-------------\nNone. This one only talks to DaVinci Resolve.\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2,
+      "type": "ResolveGrabbedAudio",
+      "pos": [
+        40,
+        350
+      ],
+      "size": [
+        340,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "seconds",
+          "type": "FLOAT",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolveLoadTimelineAudio"
+      },
+      "widgets_values": [
+        "",
+        0.0,
+        "the clip at the playhead",
+        0,
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "type": "SaveAudio",
+      "pos": [
+        440,
+        350
+      ],
+      "size": [
+        320,
+        110
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/timeline"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

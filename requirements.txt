@@ -1,0 +1,5 @@
+# Nothing beyond what ComfyUI already ships.
+#
+# Resolve's own scripting module is found on disk, not installed from pip, and
+# torch / numpy / Pillow / torchaudio all come with ComfyUI. Deliberately empty
+# so the pack cannot break an install.
