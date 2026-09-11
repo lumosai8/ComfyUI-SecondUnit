@@ -115,33 +115,64 @@ app.registerExtension({
           this.secondUnitVideo.load();
           this.secondUnitVideo.style.display = "none";
         }
-        this.setDirtyCanvas(true, true);
-        return;
-      }
-      if (this.secondUnitVideo) this.secondUnitVideo.style.display = "";
+      } else {
+        if (this.secondUnitVideo) this.secondUnitVideo.style.display = "";
 
-      const src = api.apiURL(
-        `/view?filename=${encodeURIComponent(clip.filename)}&subfolder=${encodeURIComponent(
-          clip.subfolder || ""
-        )}&type=${clip.type || "output"}&rand=${Math.random()}`
-      );
+        const src = api.apiURL(
+          `/view?filename=${encodeURIComponent(clip.filename)}&subfolder=${encodeURIComponent(
+            clip.subfolder || ""
+          )}&type=${clip.type || "output"}&rand=${Math.random()}`
+        );
 
-      // Reuse one player across runs; adding a widget per run would grow the
-      // node forever.
-      if (!this.secondUnitVideo) {
-        const video = document.createElement("video");
-        video.controls = true;
-        video.loop = true;
-        video.style.width = "100%";
-        video.style.borderRadius = "8px";
-        this.secondUnitVideo = video;
-        this.addDOMWidget("secondunit_preview", "video", video, {
-          serialize: false,
-          hideOnZoom: false,
-        });
+        // Reuse one player across runs; adding a widget per run would grow the
+        // node forever.
+        if (!this.secondUnitVideo) {
+          const video = document.createElement("video");
+          video.controls = true;
+          video.loop = true;
+          video.style.width = "100%";
+          video.style.borderRadius = "8px";
+          this.secondUnitVideo = video;
+          this.addDOMWidget("secondunit_preview", "video", video, {
+            serialize: false,
+            hideOnZoom: false,
+          });
+        }
+        this.secondUnitVideo.src = src;
+        this.setSize?.([Math.max(this.size[0], 320), Math.max(this.size[1], 420)]);
       }
-      this.secondUnitVideo.src = src;
-      this.setSize?.([Math.max(this.size[0], 320), Math.max(this.size[1], 420)]);
+
+      // Same treatment for sound. Picture is shown by ComfyUI itself and video
+      // by the player above, but sound gets a player from nobody — so build
+      // one here, or a run with audio wired in shows nothing to listen to.
+      const sound = message?.audio?.[0];
+      if (!sound) {
+        if (this.secondUnitAudio) {
+          this.secondUnitAudio.removeAttribute("src");
+          this.secondUnitAudio.load();
+          this.secondUnitAudio.style.display = "none";
+        }
+      } else {
+        const src = api.apiURL(
+          `/view?filename=${encodeURIComponent(sound.filename)}&subfolder=${encodeURIComponent(
+            sound.subfolder || ""
+          )}&type=${sound.type || "output"}&rand=${Math.random()}`
+        );
+
+        // Reuse one player across runs, same as video above.
+        if (!this.secondUnitAudio) {
+          const player = document.createElement("audio");
+          player.controls = true;
+          player.style.width = "100%";
+          this.secondUnitAudio = player;
+          this.addDOMWidget("secondunit_audio_preview", "audio", player, {
+            serialize: false,
+            hideOnZoom: false,
+          });
+        }
+        this.secondUnitAudio.style.display = "";
+        this.secondUnitAudio.src = src;
+      }
       this.setDirtyCanvas(true, true);
     };
   },
