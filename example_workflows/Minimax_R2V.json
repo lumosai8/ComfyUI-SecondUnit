@@ -1,8 +1,8 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 151,
-  "last_link_id": 297,
+  "last_node_id": 153,
+  "last_link_id": 301,
   "nodes": [
     {
       "id": 115,
@@ -205,7 +205,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -253,7 +253,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -401,7 +401,7 @@
         140
       ],
       "flags": {},
-      "order": 26,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -468,7 +468,7 @@
         60
       ],
       "flags": {},
-      "order": 25,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -503,58 +503,6 @@
       }
     },
     {
-      "id": 127,
-      "type": "UNETLoader",
-      "pos": [
-        -1490,
-        4980
-      ],
-      "size": [
-        640,
-        90
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            252,
-            285,
-            287
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "UNETLoader",
-        "models": [
-          {
-            "name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors",
-            "directory": "diffusion_models"
-          }
-        ],
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.8",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
-        "default"
-      ],
-      "widgets_values_named": {
-        "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
-        "weight_dtype": "default"
-      }
-    },
-    {
       "id": 128,
       "type": "CLIPLoader",
       "pos": [
@@ -566,7 +514,7 @@
         120
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -618,7 +566,7 @@
         90
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -663,7 +611,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -727,7 +675,7 @@
         70
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -771,7 +719,7 @@
         380
       ],
       "flags": {},
-      "order": 24,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -922,7 +870,7 @@
         520
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -944,71 +892,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 141,
-      "type": "ComfySwitchNode",
-      "pos": [
-        -730,
-        4940
-      ],
-      "size": [
-        270,
-        110
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "on_false",
-          "shape": 7,
-          "type": "MODEL",
-          "link": 287
-        },
-        {
-          "name": "on_true",
-          "shape": 7,
-          "type": "MODEL",
-          "link": 286
-        },
-        {
-          "name": "switch",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "switch"
-          },
-          "link": 290
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "MODEL",
-          "links": [
-            288
-          ]
-        }
-      ],
-      "title": "If/Else Switch (model)",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "ComfySwitchNode",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "switch": true
-          },
-          "version": "7.8",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        false
-      ],
-      "widgets_values_named": {
-        "switch": false
-      }
-    },
-    {
       "id": 142,
       "type": "ComfySwitchNode",
       "pos": [
@@ -1020,7 +903,7 @@
         110
       ],
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -1085,7 +968,7 @@
         90
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1129,7 +1012,7 @@
         90
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1162,62 +1045,6 @@
       }
     },
     {
-      "id": 145,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        -1490,
-        5140
-      ],
-      "size": [
-        640,
-        90
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 285
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            286
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "LoraLoaderModelOnly",
-        "models": [
-          {
-            "name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
-            "directory": "loras"
-          }
-        ],
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.8",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
-        1
-      ],
-      "widgets_values_named": {
-        "lora_name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
-        "strength_model": 1
-      }
-    },
-    {
       "id": 146,
       "type": "PrimitiveBoolean",
       "pos": [
@@ -1229,7 +1056,7 @@
         70
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1274,7 +1101,7 @@
         106
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1319,7 +1146,7 @@
         86
       ],
       "flags": {},
-      "order": 20,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1445,7 +1272,7 @@
         740
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1478,7 +1305,7 @@
         126
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1535,7 +1362,7 @@
         214
       ],
       "flags": {},
-      "order": 30,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1571,11 +1398,12 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "ResolveSend",
         "ue_properties": {
           "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "Node name for S&R": "ResolveSend"
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
       },
       "widgets_values": [
         "media pool only",
@@ -1604,7 +1432,7 @@
         330
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1653,7 +1481,7 @@
         330
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1688,6 +1516,277 @@
       "widgets_values_named": {
         "image": "red_superboy_on_city_roof.png",
         "upload": "image"
+      }
+    },
+    {
+      "id": 141,
+      "type": "ComfySwitchNode",
+      "pos": [
+        -706.0452028741634,
+        4935.872217410059
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 299
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 301
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 290
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "MODEL",
+          "links": [
+            288
+          ]
+        }
+      ],
+      "title": "If/Else Switch (model)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "ComfySwitchNode",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "switch": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
+    },
+    {
+      "id": 127,
+      "type": "UNETLoader",
+      "pos": [
+        -1494.966238428527,
+        4967.267611790573
+      ],
+      "size": [
+        640,
+        90
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            252,
+            285,
+            298
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 153,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        -1158.2080099557572,
+        4896.313686848492
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 298
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            299
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "cnr_id": "comfy-core",
+        "ver": "0.35.0",
+        "Node name for S&R": "ModelAttentionBackend"
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ],
+      "widgets_values_named": {
+        "attention": "comfy kitchen attention"
+      }
+    },
+    {
+      "id": 152,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        -1473.375898330352,
+        4900.290049051759
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 300
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            301
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "cnr_id": "comfy-core",
+        "ver": "0.35.0",
+        "Node name for S&R": "ModelAttentionBackend"
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ],
+      "widgets_values_named": {
+        "attention": "comfy kitchen attention"
+      }
+    },
+    {
+      "id": 145,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -1486.3464571377604,
+        5130.970475584494
+      ],
+      "size": [
+        640,
+        90
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 285
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            300
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "models": [
+          {
+            "name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+            "directory": "loras"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        "strength_model": 1
       }
     }
   ],
@@ -1893,22 +1992,6 @@
       "MODEL"
     ],
     [
-      286,
-      145,
-      0,
-      141,
-      1,
-      "MODEL"
-    ],
-    [
-      287,
-      127,
-      0,
-      141,
-      0,
-      "MODEL"
-    ],
-    [
       288,
       141,
       0,
@@ -1987,6 +2070,38 @@
       150,
       1,
       "VIDEO"
+    ],
+    [
+      298,
+      127,
+      0,
+      153,
+      0,
+      "MODEL"
+    ],
+    [
+      299,
+      153,
+      0,
+      141,
+      0,
+      "MODEL"
+    ],
+    [
+      300,
+      145,
+      0,
+      152,
+      0,
+      "MODEL"
+    ],
+    [
+      301,
+      152,
+      0,
+      141,
+      1,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -2066,10 +2181,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.0709646286864525,
+      "scale": 0.7735600977653637,
       "offset": [
-        1608.9262140164062,
-        -5268.508419478001
+        2619.936043653559,
+        -4504.405802603639
       ]
     },
     "frontendVersion": "1.51.10",
