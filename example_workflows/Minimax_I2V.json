@@ -328,81 +328,6 @@
       }
     },
     {
-      "id": 127,
-      "type": "ResolveFrames",
-      "pos": [
-        -1490.986056208894,
-        4841.1846441822745
-      ],
-      "size": [
-        275.5083984375,
-        550
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "first frame",
-          "type": "IMAGE",
-          "links": [
-            246
-          ]
-        },
-        {
-          "name": "last frame",
-          "type": "IMAGE",
-          "links": []
-        },
-        {
-          "name": "cut duration",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ResolveFrames",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
-        true,
-        "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
-        "playhead",
-        1,
-        0,
-        "nearest the playhead",
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "widgets_values_named": {
-        "first_frame": "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
-        "second_frame": true,
-        "last_frame": "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
-        "where": "playhead",
-        "track": 1,
-        "clip_index": 0,
-        "which": "nearest the playhead",
-        "cut_index": 0,
-        "cut_duration": 0,
-        "Grab the cut": null,
-        "Grab into first": null,
-        "Grab into last": null,
-        "Upload into first": null,
-        "Upload into last": null
-      }
-    },
-    {
       "id": 105,
       "type": "4c314f31-ecda-4b08-ae98-faaba1bf613f",
       "pos": [
@@ -547,6 +472,81 @@
         "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
         "strength_model_1": 1,
         "value_2": 8
+      }
+    },
+    {
+      "id": 127,
+      "type": "ResolveFrames",
+      "pos": [
+        -1490.986056208894,
+        4841.1846441822745
+      ],
+      "size": [
+        275.5083984375,
+        550
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "first frame",
+          "type": "IMAGE",
+          "links": [
+            246
+          ]
+        },
+        {
+          "name": "last frame",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "cut duration",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolveFrames",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
+        false,
+        "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
+        "playhead",
+        1,
+        0,
+        "nearest the playhead",
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "widgets_values_named": {
+        "first_frame": "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
+        "second_frame": false,
+        "last_frame": "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
+        "where": "playhead",
+        "track": 1,
+        "clip_index": 0,
+        "which": "nearest the playhead",
+        "cut_index": 0,
+        "cut_duration": 0,
+        "Grab the cut": null,
+        "Grab into first": null,
+        "Grab into last": null,
+        "Upload into first": null,
+        "Upload into last": null
       }
     }
   ],
@@ -2790,10 +2790,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 1.312249149773916,
+      "scale": 0.9432178395050256,
       "offset": [
-        1610.625453336688,
-        -4659.063745999054
+        2045.7717070804886,
+        -4525.000655854422
       ]
     }
   },
