@@ -164,4 +164,4 @@ Each carries a note saying which models it needs and where the files go.
 
 ## Licence
 
-MIT. Free forever. Similar bridges sell for $50+, this one stays free.
+MIT. Free forever.
