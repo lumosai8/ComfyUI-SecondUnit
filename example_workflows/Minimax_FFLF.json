@@ -2,7 +2,7 @@
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
   "last_node_id": 183,
-  "last_link_id": 267,
+  "last_link_id": 268,
   "nodes": [
     {
       "id": 116,
@@ -328,83 +328,6 @@
       }
     },
     {
-      "id": 127,
-      "type": "ResolveFrames",
-      "pos": [
-        -1490.986056208894,
-        4841.1846441822745
-      ],
-      "size": [
-        275.5083984375,
-        550
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "first frame",
-          "type": "IMAGE",
-          "links": [
-            246
-          ]
-        },
-        {
-          "name": "last frame",
-          "type": "IMAGE",
-          "links": [
-            257
-          ]
-        },
-        {
-          "name": "cut duration",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ResolveFrames",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
-        true,
-        "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
-        "playhead",
-        1,
-        0,
-        "nearest the playhead",
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "widgets_values_named": {
-        "first_frame": "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
-        "second_frame": true,
-        "last_frame": "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
-        "where": "playhead",
-        "track": 1,
-        "clip_index": 0,
-        "which": "nearest the playhead",
-        "cut_index": 0,
-        "cut_duration": 0,
-        "Grab the cut": null,
-        "Grab into first": null,
-        "Grab into last": null,
-        "Upload into first": null,
-        "Upload into last": null
-      }
-    },
-    {
       "id": 105,
       "type": "4c314f31-ecda-4b08-ae98-faaba1bf613f",
       "pos": [
@@ -454,7 +377,7 @@
           "widget": {
             "name": "value_1"
           },
-          "link": null
+          "link": 268
         },
         {
           "label": "audio_vae",
@@ -550,6 +473,85 @@
         "strength_model_1": 1,
         "value_2": 8
       }
+    },
+    {
+      "id": 127,
+      "type": "ResolveFrames",
+      "pos": [
+        -1490.986056208894,
+        4841.1846441822745
+      ],
+      "size": [
+        275.5083984375,
+        550
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "first frame",
+          "type": "IMAGE",
+          "links": [
+            246
+          ]
+        },
+        {
+          "name": "last frame",
+          "type": "IMAGE",
+          "links": [
+            257
+          ]
+        },
+        {
+          "name": "cut duration",
+          "type": "FLOAT",
+          "links": [
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolveFrames",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
+        true,
+        "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
+        "playhead",
+        1,
+        0,
+        "nearest the playhead",
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "widgets_values_named": {
+        "first_frame": "second-unit/da72b39b-03bb-4094-815d-8c72b781c20b.jpeg",
+        "second_frame": true,
+        "last_frame": "second-unit/4a4f066f-8406-466f-ab2f-6e834a5d03b7.jpeg",
+        "where": "playhead",
+        "track": 1,
+        "clip_index": 0,
+        "which": "nearest the playhead",
+        "cut_index": 0,
+        "cut_duration": 0,
+        "Grab the cut": null,
+        "Grab into first": null,
+        "Grab into last": null,
+        "Upload into first": null,
+        "Upload into last": null
+      }
     }
   ],
   "links": [
@@ -600,6 +602,14 @@
       128,
       1,
       "VIDEO"
+    ],
+    [
+      268,
+      127,
+      2,
+      105,
+      4,
+      "FLOAT"
     ]
   ],
   "groups": [
@@ -624,7 +634,7 @@
         "state": {
           "lastGroupId": 6,
           "lastNodeId": 183,
-          "lastLinkId": 267,
+          "lastLinkId": 268,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2918,10 +2928,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 1.2531404063559675,
+      "scale": 1.1392185512326976,
       "offset": [
-        2298.889234376613,
-        -4080.912585854489
+        1668.8187387878559,
+        -4551.567023903519
       ]
     }
   },
