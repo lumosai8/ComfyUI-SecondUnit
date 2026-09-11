@@ -1,62 +1,9 @@
 {
   "id": "b32e7574-7000-4ed7-ba5c-c42b3e8af173",
   "revision": 0,
-  "last_node_id": 119,
-  "last_link_id": 228,
+  "last_node_id": 140,
+  "last_link_id": 236,
   "nodes": [
-    {
-      "id": 115,
-      "type": "ResolutionSelector",
-      "pos": [
-        -1550,
-        5220
-      ],
-      "size": [
-        270,
-        170
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "showAdvanced": true,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            219
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            220
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "ResolutionSelector",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.8",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "16:9 (Widescreen)",
-        0.4,
-        32
-      ],
-      "widgets_values_named": {
-        "aspect_ratio": "16:9 (Widescreen)",
-        "megapixels": 0.4,
-        "multiple": 32
-      }
-    },
     {
       "id": 116,
       "type": "MarkdownNote",
@@ -69,7 +16,7 @@
         740
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -91,39 +38,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 117,
-      "type": "MarkdownNote",
-      "pos": [
-        -2550,
-        4840
-      ],
-      "size": [
-        440,
-        740
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Note: Model Links",
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.8",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "## Model Links\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_fl2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_fl2va_pruned_int8_convrot.safetensors\n│   └── 📂 text_encoders/\n│       └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
-      ],
-      "widgets_values_named": {
-        "text": "## Model Links\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_fl2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_fl2va_pruned_int8_convrot.safetensors\n│   └── 📂 text_encoders/\n│       └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 118,
       "type": "MarkdownNote",
       "pos": [
@@ -135,7 +49,7 @@
         520
       ],
       "flags": {},
-      "order": 3,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -157,115 +71,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 105,
-      "type": "4c314f31-ecda-4b08-ae98-faaba1bf613f",
-      "pos": [
-        -1180,
-        4840
-      ],
-      "size": [
-        480,
-        630
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "first_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "last_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 219
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 220
-        },
-        {
-          "label": "duration",
-          "name": "value_1",
-          "type": "FLOAT",
-          "widget": {
-            "name": "value_1"
-          },
-          "link": null
-        },
-        {
-          "label": "audio_vae",
-          "name": "vae_name_1",
-          "type": "COMBO",
-          "widget": {
-            "name": "vae_name_1"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            228
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "previewExposures": [],
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "width": true,
-            "height": true,
-            "value_1": true,
-            "vae_name_1": true
-          },
-          "version": "7.8",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "Realistic live-action cinematic look, action movie trailer: practical film photography style, a post-rain dusk metropolis, anamorphic lens, shallow depth of field, film grain, city volumetric fog, flying-car traffic between the towers, restrained grading for a premium feel, powerful natural movement.\n\nScene overview: at dusk on a cluster of skyscrapers, the protagonist is being chased, sprinting and leaping across rooftops, jumping from one building's roof to the next with pursuers closing in behind. This is the escape sequence of an action movie trailer: every leap is life-or-death, thrilling and fluid.\n\nStoryboard (each shot a separate scene, rapid cuts, all landing on the musical beats):\n[0s-1.5s] Shot 1: high side angle: the protagonist sprinting at the roof edge, pursuers appearing in the rooftop doorway behind him, wind catching his coat.\n[1s-2.5s] Shot 2: the protagonist leaps across the gap between buildings, body stretching mid-air, towers and flying-car light trails behind him, a slight slow-motion feel.\n[2.5s-4s] Shot 3: he lands, rolls and rises, low-angle shot, tower shadows and fog behind him, he keeps running.\n[4s-5s] Shot 4: freeze: the instant he hits the edge of the next roof and launches into the jump, silhouette, holding.\n\nCamera: each shot its own angle, cuts clean and hard, no dissolves, a slight frame jitter on the jumps.\n\nAudio: wind, rapid footsteps, city ambience, low score underneath, an accent hit on each leap, the score bursting at 4s, closing the last 1s.\n\nNo text, subtitles, logos or watermarks of any kind, no animation or cartoon rendering, no overly-CG look, keep the live-action texture.",
-        1344,
-        768,
-        5,
-        556589502035082,
-        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-        "minimax_h3_video_vae_fp16.safetensors",
-        "minimax_h3_audio_vae_fp32.safetensors"
-      ],
-      "widgets_values_named": {
-        "prompt": "Realistic live-action cinematic look, action movie trailer: practical film photography style, a post-rain dusk metropolis, anamorphic lens, shallow depth of field, film grain, city volumetric fog, flying-car traffic between the towers, restrained grading for a premium feel, powerful natural movement.\n\nScene overview: at dusk on a cluster of skyscrapers, the protagonist is being chased, sprinting and leaping across rooftops, jumping from one building's roof to the next with pursuers closing in behind. This is the escape sequence of an action movie trailer: every leap is life-or-death, thrilling and fluid.\n\nStoryboard (each shot a separate scene, rapid cuts, all landing on the musical beats):\n[0s-1.5s] Shot 1: high side angle: the protagonist sprinting at the roof edge, pursuers appearing in the rooftop doorway behind him, wind catching his coat.\n[1s-2.5s] Shot 2: the protagonist leaps across the gap between buildings, body stretching mid-air, towers and flying-car light trails behind him, a slight slow-motion feel.\n[2.5s-4s] Shot 3: he lands, rolls and rises, low-angle shot, tower shadows and fog behind him, he keeps running.\n[4s-5s] Shot 4: freeze: the instant he hits the edge of the next roof and launches into the jump, silhouette, holding.\n\nCamera: each shot its own angle, cuts clean and hard, no dissolves, a slight frame jitter on the jumps.\n\nAudio: wind, rapid footsteps, city ambience, low score underneath, an accent hit on each leap, the score bursting at 4s, closing the last 1s.\n\nNo text, subtitles, logos or watermarks of any kind, no animation or cartoon rendering, no overly-CG look, keep the live-action texture.",
-        "width": 1344,
-        "height": 768,
-        "value_1": 5,
-        "noise_seed": 556589502035082,
-        "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-        "vae_name": "minimax_h3_video_vae_fp16.safetensors",
-        "vae_name_1": "minimax_h3_audio_vae_fp32.safetensors"
-      }
-    },
-    {
       "id": 119,
       "type": "ResolveSend",
       "pos": [
@@ -274,7 +79,7 @@
       ],
       "size": [
         272.486328125,
-        194
+        214
       ],
       "flags": {},
       "order": 5,
@@ -290,12 +95,18 @@
           "name": "video",
           "shape": 7,
           "type": "VIDEO",
-          "link": 228
+          "link": 234
         },
         {
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "subtitles",
+          "shape": 7,
+          "type": "STRING",
           "link": null
         }
       ],
@@ -328,44 +139,239 @@
         "name": "second-unit",
         "Send to Resolve": null
       }
+    },
+    {
+      "id": 115,
+      "type": "ResolutionSelector",
+      "pos": [
+        -1566.8501809866668,
+        5210.296946341948
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            235
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            236
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "ResolutionSelector",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "16:9 (Widescreen)",
+        0.4,
+        32
+      ],
+      "widgets_values_named": {
+        "aspect_ratio": "16:9 (Widescreen)",
+        "megapixels": 0.4,
+        "multiple": 32
+      }
+    },
+    {
+      "id": 139,
+      "type": "2477d246-4f71-449c-98fb-3837529dffdb",
+      "pos": [
+        -1188.2075380103847,
+        4848.062694851965
+      ],
+      "size": [
+        480,
+        630
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 235
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 236
+        },
+        {
+          "label": "duration",
+          "name": "value_1",
+          "type": "FLOAT",
+          "widget": {
+            "name": "value_1"
+          },
+          "link": null
+        },
+        {
+          "label": "audio_vae",
+          "name": "vae_name_1",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name_1"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            234
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "value_1": true,
+            "vae_name_1": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "previewExposures": []
+      },
+      "widgets_values": [
+        "a cat jumps on a man",
+        1344,
+        768,
+        5,
+        645441634232594,
+        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax_h3_video_vae_fp16.safetensors",
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "prompt": "a cat jumps on a man",
+        "width": 1344,
+        "height": 768,
+        "value_1": 5,
+        "noise_seed": 645441634232594,
+        "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors",
+        "vae_name_1": "minimax_h3_audio_vae_fp32.safetensors"
+      }
+    },
+    {
+      "id": 117,
+      "type": "MarkdownNote",
+      "pos": [
+        -2550,
+        4840
+      ],
+      "size": [
+        440,
+        740
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Model Links",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "## Model Links\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_fl2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n- [qwen3vl_8b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Qwen3-VL/resolve/main/text_encoders/qwen3vl_8b_fp8_scaled.safetensors)\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_fl2va_pruned_int8_convrot.safetensors\n│   └── 📂 text_encoders/\n│       └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
+      ],
+      "widgets_values_named": {
+        "text": "## Model Links\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_fl2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n- [qwen3vl_8b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Qwen3-VL/resolve/main/text_encoders/qwen3vl_8b_fp8_scaled.safetensors)\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_fl2va_pruned_int8_convrot.safetensors\n│   └── 📂 text_encoders/\n│       └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
     [
-      219,
-      115,
-      0,
-      105,
-      2,
-      "INT"
-    ],
-    [
-      220,
-      115,
-      1,
-      105,
-      3,
-      "INT"
-    ],
-    [
-      228,
-      105,
+      234,
+      139,
       0,
       119,
       1,
       "VIDEO"
+    ],
+    [
+      235,
+      115,
+      0,
+      139,
+      2,
+      "INT"
+    ],
+    [
+      236,
+      115,
+      1,
+      139,
+      3,
+      "INT"
     ]
   ],
   "groups": [],
   "definitions": {
     "subgraphs": [
       {
-        "id": "4c314f31-ecda-4b08-ae98-faaba1bf613f",
+        "id": "2477d246-4f71-449c-98fb-3837529dffdb",
         "version": 1,
         "state": {
           "lastGroupId": 4,
-          "lastNodeId": 119,
-          "lastLinkId": 228,
+          "lastNodeId": 140,
+          "lastLinkId": 236,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -419,7 +425,7 @@
             "name": "prompt",
             "type": "STRING",
             "linkIds": [
-              197
+              229
             ],
             "pos": [
               -2456,
@@ -455,7 +461,8 @@
             "name": "value_1",
             "type": "FLOAT",
             "linkIds": [
-              206
+              206,
+              232
             ],
             "label": "duration",
             "pos": [
@@ -543,7 +550,7 @@
         "widgets": [],
         "nodes": [
           {
-            "id": 11,
+            "id": 122,
             "type": "VAELoader",
             "pos": [
               -2020,
@@ -554,7 +561,7 @@
               70
             ],
             "flags": {},
-            "order": 4,
+            "order": 2,
             "mode": 0,
             "inputs": [
               {
@@ -582,18 +589,18 @@
               "cnr_id": "comfy-core",
               "ver": "0.33.0",
               "Node name for S&R": "VAELoader",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              },
               "models": [
                 {
                   "name": "minimax_h3_video_vae_fp16.safetensors",
                   "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
                   "directory": "vae"
                 }
-              ],
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.8",
-                "input_ue_unconnectable": {}
-              }
+              ]
             },
             "widgets_values": [
               "minimax_h3_video_vae_fp16.safetensors"
@@ -603,7 +610,7 @@
             }
           },
           {
-            "id": 24,
+            "id": 123,
             "type": "VAELoader",
             "pos": [
               -2020,
@@ -614,7 +621,7 @@
               70
             ],
             "flags": {},
-            "order": 10,
+            "order": 3,
             "mode": 0,
             "inputs": [
               {
@@ -641,18 +648,18 @@
               "cnr_id": "comfy-core",
               "ver": "0.33.0",
               "Node name for S&R": "VAELoader",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              },
               "models": [
                 {
                   "name": "minimax_h3_audio_vae_fp32.safetensors",
                   "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
                   "directory": "vae"
                 }
-              ],
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.8",
-                "input_ue_unconnectable": {}
-              }
+              ]
             },
             "widgets_values": [
               "minimax_h3_audio_vae_fp32.safetensors"
@@ -662,7 +669,7 @@
             }
           },
           {
-            "id": 23,
+            "id": 124,
             "type": "VAEDecodeAudio",
             "pos": [
               -50,
@@ -675,7 +682,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 9,
+            "order": 4,
             "mode": 0,
             "inputs": [
               {
@@ -713,7 +720,7 @@
             }
           },
           {
-            "id": 10,
+            "id": 125,
             "type": "VAEDecode",
             "pos": [
               -50,
@@ -726,7 +733,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 3,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -764,7 +771,7 @@
             }
           },
           {
-            "id": 17,
+            "id": 126,
             "type": "KSamplerSelect",
             "pos": [
               -790,
@@ -806,7 +813,7 @@
             }
           },
           {
-            "id": 9,
+            "id": 127,
             "type": "BasicScheduler",
             "pos": [
               -790,
@@ -817,7 +824,7 @@
               130
             ],
             "flags": {},
-            "order": 2,
+            "order": 6,
             "mode": 0,
             "inputs": [
               {
@@ -859,7 +866,7 @@
             }
           },
           {
-            "id": 14,
+            "id": 128,
             "type": "SamplerCustomAdvanced",
             "pos": [
               -360,
@@ -870,7 +877,7 @@
               140
             ],
             "flags": {},
-            "order": 6,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -933,7 +940,7 @@
             }
           },
           {
-            "id": 16,
+            "id": 129,
             "type": "BasicGuider",
             "pos": [
               -790,
@@ -982,7 +989,7 @@
             }
           },
           {
-            "id": 6,
+            "id": 130,
             "type": "UNETLoader",
             "pos": [
               -2020,
@@ -993,7 +1000,7 @@
               90
             ],
             "flags": {},
-            "order": 1,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -1021,18 +1028,18 @@
               "cnr_id": "comfy-core",
               "ver": "0.33.0",
               "Node name for S&R": "UNETLoader",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              },
               "models": [
                 {
                   "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
                   "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
                   "directory": "diffusion_models"
                 }
-              ],
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.8",
-                "input_ue_unconnectable": {}
-              }
+              ]
             },
             "widgets_values": [
               "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
@@ -1044,7 +1051,7 @@
             }
           },
           {
-            "id": 13,
+            "id": 131,
             "type": "CLIPLoader",
             "pos": [
               -2020,
@@ -1055,7 +1062,7 @@
               120
             ],
             "flags": {},
-            "order": 5,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -1082,18 +1089,18 @@
               "cnr_id": "comfy-core",
               "ver": "0.33.0",
               "Node name for S&R": "CLIPLoader",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              },
               "models": [
                 {
                   "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
                   "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
                   "directory": "text_encoders"
                 }
-              ],
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.8",
-                "input_ue_unconnectable": {}
-              }
+              ]
             },
             "widgets_values": [
               "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
@@ -1107,7 +1114,7 @@
             }
           },
           {
-            "id": 15,
+            "id": 132,
             "type": "RandomNoise",
             "pos": [
               -790,
@@ -1118,7 +1125,7 @@
               90
             ],
             "flags": {},
-            "order": 7,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -1161,7 +1168,7 @@
             }
           },
           {
-            "id": 91,
+            "id": 133,
             "type": "CreateVideo",
             "pos": [
               260,
@@ -1169,10 +1176,10 @@
             ],
             "size": [
               270,
-              110
+              126
             ],
             "flags": {},
-            "order": 11,
+            "order": 12,
             "mode": 0,
             "inputs": [
               {
@@ -1211,15 +1218,17 @@
             },
             "widgets_values": [
               24,
-              8
+              8,
+              "sRGB"
             ],
             "widgets_values_named": {
               "fps": 24,
-              "bit_depth": 8
+              "bit_depth": 8,
+              "color_space": "sRGB"
             }
           },
           {
-            "id": 104,
+            "id": 134,
             "type": "MiniMaxH3ImageToVideo",
             "pos": [
               -1290,
@@ -1230,7 +1239,7 @@
               510
             ],
             "flags": {},
-            "order": 12,
+            "order": 13,
             "mode": 0,
             "inputs": [
               {
@@ -1266,7 +1275,7 @@
                 "widget": {
                   "name": "prompt"
                 },
-                "link": 197
+                "link": 231
               },
               {
                 "localized_name": "width",
@@ -1338,7 +1347,7 @@
             }
           },
           {
-            "id": 107,
+            "id": 135,
             "type": "ComfyMathExpression",
             "pos": [
               -1710,
@@ -1351,19 +1360,18 @@
             "flags": {
               "collapsed": false
             },
-            "order": 13,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
                 "label": "a",
-                "localized_name": "values.a",
+                "localized_name": "a",
                 "name": "values.a",
                 "type": "FLOAT,INT,BOOLEAN",
                 "link": 205
               },
               {
-                "label": "b",
-                "localized_name": "values.b",
+                "localized_name": "b",
                 "name": "values.b",
                 "shape": 7,
                 "type": "FLOAT,INT,BOOLEAN",
@@ -1410,7 +1418,7 @@
             }
           },
           {
-            "id": 111,
+            "id": 136,
             "type": "PrimitiveFloat",
             "pos": [
               -2020,
@@ -1421,7 +1429,7 @@
               70
             ],
             "flags": {},
-            "order": 14,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -1460,6 +1468,146 @@
             ],
             "widgets_values_named": {
               "value": 2
+            }
+          },
+          {
+            "id": 137,
+            "type": "SecondUnitPrompt",
+            "pos": [
+              -2278.2824768904634,
+              4227.927563141207
+            ],
+            "size": [
+              400,
+              296
+            ],
+            "flags": {},
+            "order": 16,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 230
+              },
+              {
+                "localized_name": "first_image",
+                "name": "first_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "last_image",
+                "name": "last_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "idea",
+                "name": "idea",
+                "type": "STRING",
+                "widget": {
+                  "name": "idea"
+                },
+                "link": 229
+              },
+              {
+                "localized_name": "duration",
+                "name": "duration",
+                "shape": 7,
+                "type": "FLOAT",
+                "widget": {
+                  "name": "duration"
+                },
+                "link": 232
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  231
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "SecondUnitPrompt",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              "minimax",
+              "text to video",
+              "",
+              5,
+              1031469082999519,
+              "randomize",
+              512,
+              0.7
+            ],
+            "widgets_values_named": {
+              "model": "minimax",
+              "mode": "text to video",
+              "idea": "",
+              "duration": 5,
+              "seed": 1031469082999519,
+              "control_after_generate": "randomize",
+              "max_length": 512,
+              "temperature": 0.7
+            }
+          },
+          {
+            "id": 138,
+            "type": "CLIPLoader",
+            "pos": [
+              -2593.033592790857,
+              4231.904775293036
+            ],
+            "size": [
+              270,
+              106
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "CLIP",
+                "name": "CLIP",
+                "type": "CLIP",
+                "links": [
+                  230
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.35.0",
+              "Node name for S&R": "CLIPLoader",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              "qwen3vl_8b_fp8_scaled.safetensors",
+              "stable_diffusion",
+              "default"
+            ],
+            "widgets_values_named": {
+              "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
+              "type": "stable_diffusion",
+              "device": "default"
             }
           }
         ],
@@ -1516,119 +1664,119 @@
         "links": [
           {
             "id": 23,
-            "origin_id": 24,
+            "origin_id": 123,
             "origin_slot": 0,
-            "target_id": 23,
+            "target_id": 124,
             "target_slot": 1,
             "type": "VAE"
           },
           {
             "id": 8,
-            "origin_id": 11,
+            "origin_id": 122,
             "origin_slot": 0,
-            "target_id": 10,
+            "target_id": 125,
             "target_slot": 1,
             "type": "VAE"
           },
           {
             "id": 5,
-            "origin_id": 6,
+            "origin_id": 130,
             "origin_slot": 0,
-            "target_id": 9,
+            "target_id": 127,
             "target_slot": 0,
             "type": "MODEL"
           },
           {
             "id": 40,
-            "origin_id": 15,
+            "origin_id": 132,
             "origin_slot": 0,
-            "target_id": 14,
+            "target_id": 128,
             "target_slot": 0,
             "type": "NOISE"
           },
           {
             "id": 12,
-            "origin_id": 16,
+            "origin_id": 129,
             "origin_slot": 0,
-            "target_id": 14,
+            "target_id": 128,
             "target_slot": 1,
             "type": "GUIDER"
           },
           {
             "id": 16,
-            "origin_id": 17,
+            "origin_id": 126,
             "origin_slot": 0,
-            "target_id": 14,
+            "target_id": 128,
             "target_slot": 2,
             "type": "SAMPLER"
           },
           {
             "id": 18,
-            "origin_id": 9,
+            "origin_id": 127,
             "origin_slot": 0,
-            "target_id": 14,
+            "target_id": 128,
             "target_slot": 3,
             "type": "SIGMAS"
           },
           {
             "id": 188,
-            "origin_id": 104,
+            "origin_id": 134,
             "origin_slot": 1,
-            "target_id": 14,
+            "target_id": 128,
             "target_slot": 4,
             "type": "LATENT"
           },
           {
             "id": 193,
-            "origin_id": 6,
+            "origin_id": 130,
             "origin_slot": 0,
-            "target_id": 16,
+            "target_id": 129,
             "target_slot": 0,
             "type": "MODEL"
           },
           {
             "id": 187,
-            "origin_id": 104,
+            "origin_id": 134,
             "origin_slot": 0,
-            "target_id": 16,
+            "target_id": 129,
             "target_slot": 1,
             "type": "CONDITIONING"
           },
           {
             "id": 167,
-            "origin_id": 10,
+            "origin_id": 125,
             "origin_slot": 0,
-            "target_id": 91,
+            "target_id": 133,
             "target_slot": 0,
             "type": "IMAGE"
           },
           {
             "id": 166,
-            "origin_id": 23,
+            "origin_id": 124,
             "origin_slot": 0,
-            "target_id": 91,
+            "target_id": 133,
             "target_slot": 1,
             "type": "AUDIO"
           },
           {
             "id": 189,
-            "origin_id": 13,
+            "origin_id": 131,
             "origin_slot": 0,
-            "target_id": 104,
+            "target_id": 134,
             "target_slot": 0,
             "type": "CLIP"
           },
           {
             "id": 190,
-            "origin_id": 11,
+            "origin_id": 122,
             "origin_slot": 0,
-            "target_id": 104,
+            "target_id": 134,
             "target_slot": 1,
             "type": "VAE"
           },
           {
             "id": 168,
-            "origin_id": 91,
+            "origin_id": 133,
             "origin_slot": 0,
             "target_id": -20,
             "target_slot": 0,
@@ -1638,7 +1786,7 @@
             "id": 195,
             "origin_id": -10,
             "origin_slot": 0,
-            "target_id": 104,
+            "target_id": 134,
             "target_slot": 2,
             "type": "IMAGE"
           },
@@ -1646,23 +1794,15 @@
             "id": 196,
             "origin_id": -10,
             "origin_slot": 1,
-            "target_id": 104,
+            "target_id": 134,
             "target_slot": 3,
             "type": "IMAGE"
           },
           {
-            "id": 197,
-            "origin_id": -10,
-            "origin_slot": 2,
-            "target_id": 104,
-            "target_slot": 4,
-            "type": "STRING"
-          },
-          {
             "id": 199,
-            "origin_id": 107,
+            "origin_id": 135,
             "origin_slot": 1,
-            "target_id": 104,
+            "target_id": 134,
             "target_slot": 7,
             "type": "INT"
           },
@@ -1670,7 +1810,7 @@
             "id": 200,
             "origin_id": -10,
             "origin_slot": 3,
-            "target_id": 104,
+            "target_id": 134,
             "target_slot": 5,
             "type": "INT"
           },
@@ -1678,15 +1818,15 @@
             "id": 201,
             "origin_id": -10,
             "origin_slot": 4,
-            "target_id": 104,
+            "target_id": 134,
             "target_slot": 6,
             "type": "INT"
           },
           {
             "id": 205,
-            "origin_id": 111,
+            "origin_id": 136,
             "origin_slot": 0,
-            "target_id": 107,
+            "target_id": 135,
             "target_slot": 0,
             "type": "FLOAT"
           },
@@ -1694,7 +1834,7 @@
             "id": 206,
             "origin_id": -10,
             "origin_slot": 5,
-            "target_id": 111,
+            "target_id": 136,
             "target_slot": 0,
             "type": "FLOAT"
           },
@@ -1702,7 +1842,7 @@
             "id": 207,
             "origin_id": -10,
             "origin_slot": 6,
-            "target_id": 15,
+            "target_id": 132,
             "target_slot": 0,
             "type": "INT"
           },
@@ -1710,7 +1850,7 @@
             "id": 221,
             "origin_id": -10,
             "origin_slot": 7,
-            "target_id": 6,
+            "target_id": 130,
             "target_slot": 0,
             "type": "COMBO"
           },
@@ -1718,7 +1858,7 @@
             "id": 223,
             "origin_id": -10,
             "origin_slot": 9,
-            "target_id": 11,
+            "target_id": 122,
             "target_slot": 0,
             "type": "COMBO"
           },
@@ -1726,23 +1866,23 @@
             "id": 224,
             "origin_id": -10,
             "origin_slot": 10,
-            "target_id": 24,
+            "target_id": 123,
             "target_slot": 0,
             "type": "COMBO"
           },
           {
             "id": 225,
-            "origin_id": 14,
+            "origin_id": 128,
             "origin_slot": 0,
-            "target_id": 10,
+            "target_id": 125,
             "target_slot": 0,
             "type": "LATENT"
           },
           {
             "id": 226,
-            "origin_id": 14,
+            "origin_id": 128,
             "origin_slot": 0,
-            "target_id": 23,
+            "target_id": 124,
             "target_slot": 0,
             "type": "LATENT"
           },
@@ -1750,33 +1890,69 @@
             "id": 227,
             "origin_id": -10,
             "origin_slot": 8,
-            "target_id": 13,
+            "target_id": 131,
             "target_slot": 0,
             "type": "COMBO"
+          },
+          {
+            "id": 229,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 137,
+            "target_slot": 3,
+            "type": "STRING"
+          },
+          {
+            "id": 230,
+            "origin_id": 138,
+            "origin_slot": 0,
+            "target_id": 137,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 231,
+            "origin_id": 137,
+            "origin_slot": 0,
+            "target_id": 134,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 232,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 137,
+            "target_slot": 4,
+            "type": "FLOAT"
           }
         ],
-        "extra": {}
+        "extra": {
+          "ue_links": [],
+          "links_added_by_ue": []
+        }
       }
     ]
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.49.6",
+    "frontendVersion": "1.51.10",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
-    "ds": {
-      "scale": 1.037644026845638,
-      "offset": [
-        1985.2813288359866,
-        -4465.037017720384
-      ]
-    },
     "comfyui_mcp": {
       "workflow_uuid": "7fbd37f5-03a7-42c0-abf9-ccd00650a408"
     },
-    "ue_links": []
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.8680713899528438,
+      "offset": [
+        3123.7424648253905,
+        -4537.203494861417
+      ]
+    }
   },
   "version": 0.4
 }
