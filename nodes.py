@@ -687,6 +687,126 @@ def _send_subtitles(R, path, place, seconds):
     )
 
 
+class SecondUnitPrompt:
+    """
+    Turn a short brief into a finished video prompt for Minimax or LTX.
+
+    Works like ComfyUI's own Generate Text node: the `clip` must be a
+    generate-capable text encoder (the Qwen or Gemma one from your
+    Minimax/LTX workflow), and the writing runs on your GPU. Pick the
+    model family and the mode, describe the shot in `idea`, and wire the
+    finished text straight into your video workflow's prompt.
+
+    `first_image` / `last_image` ground image-to-video and first/last-frame
+    modes: the clip sees the exact boundary frames while it writes, so the
+    motion it describes starts and lands where your frames are.
+    """
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "clip": ("CLIP", {
+                    "tooltip": "A text encoder that can write: the Qwen or Gemma "
+                               "one from your Minimax/LTX workflow.",
+                }),
+                "model": (["minimax", "ltx"], {
+                    "tooltip": "Which prompt style to write in.",
+                }),
+                "mode": (["text to video", "image to video", "first and last frame"], {
+                    "tooltip": "Text to video invents the shot. The other two "
+                               "read the wired frames while writing.",
+                }),
+                "idea": ("STRING", {
+                    "multiline": True, "default": "",
+                    "tooltip": "The shot in your own words. Put exact spoken lines in "
+                               "\"quotes\" and they survive word for word.",
+                }),
+            },
+            "optional": {
+                "first_image": ("IMAGE", {
+                    "tooltip": "First frame, or a batch of reference images. Read by the clip "
+                               "for image to video and first/last frame modes.",
+                }),
+                "last_image": ("IMAGE", {
+                    "tooltip": "Last frame. Only used by first and last frame mode.",
+                }),
+                "duration": ("FLOAT", {
+                    "default": 5.0, "min": 1.0, "max": 60.0, "step": 0.5,
+                    "tooltip": "How long the video will be. Sizes the detail to match.",
+                }),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF}),
+                "max_length": ("INT", {"default": 512, "min": 1, "max": 4096}),
+                "temperature": ("FLOAT", {"default": 0.7, "min": 0.0, "max": 2.0, "step": 0.01}),
+            },
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("prompt",)
+    FUNCTION = "write"
+    CATEGORY = CATEGORY
+    DESCRIPTION = ("Expand a short brief into a finished Minimax or LTX video "
+                   "prompt, using the wired text encoder.")
+
+    def write(self, clip, model, mode, idea, first_image=None, last_image=None,
+              duration=5.0, seed=0, max_length=512, temperature=0.7):
+        import re
+
+        import torch
+
+        from .secondunit import prompts as P
+
+        if not (idea or "").strip() and first_image is None and last_image is None:
+            raise RuntimeError("Describe the shot in 'idea' first.")
+
+        system, user = P.build(
+            model, mode, idea, duration=duration,
+            has_first=first_image is not None, has_last=last_image is not None,
+        )
+        full_text = system + "\n\n" + user
+
+        frames = [t for t in (first_image, last_image) if t is not None]
+        tokenize_kwargs = {}
+        if frames:
+            tokenize_kwargs["image"] = torch.cat(frames, dim=0)
+        try:
+            tokens = clip.tokenize(full_text, **tokenize_kwargs)
+        except TypeError:
+            # A text-only encoder does not take frames; the brief alone
+            # still gets written.
+            tokens = clip.tokenize(full_text)
+
+        try:
+            generated = clip.generate(
+                tokens,
+                do_sample=float(temperature) > 0,
+                max_length=int(max_length),
+                temperature=float(temperature),
+                top_k=64, top_p=0.95, min_p=0.05, repetition_penalty=1.05,
+                seed=int(seed),
+            )
+        except (AttributeError, TypeError) as err:
+            raise RuntimeError(
+                "This text encoder cannot write prompts. Load the Qwen or Gemma "
+                "text encoder from your Minimax/LTX workflow into 'clip'."
+            ) from err
+
+        text = clip.decode(generated)
+        text = re.sub(r"<think>.*?(?:</think>|$)", "", text, flags=re.DOTALL).strip()
+        if not text:
+            text = (idea or "").strip()
+
+        # The encoder did its job; move everything off the GPU so the video
+        # model has the whole card. ComfyUI reloads on demand next run.
+        import comfy.model_management as model_management
+
+        model_management.unload_all_models()
+        model_management.soft_empty_cache()
+
+        preview = {"text": [text]}
+        return {"ui": preview, "result": (text,)}
+
+
 def _send(path, place, seconds):
     """Import, then optionally place. Shared by every output node."""
     R, _ctx = _resolve()
@@ -751,6 +871,7 @@ NODE_CLASS_MAPPINGS = {
     "ResolveTimelineInfo": ResolveTimelineInfo,
     "ResolveSend": ResolveSend,
     "ResolveImportFile": ResolveImportFile,
+    "SecondUnitPrompt": SecondUnitPrompt,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -761,4 +882,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ResolveTimelineInfo": "Resolve Timeline Info",
     "ResolveSend": "Send to Resolve",
     "ResolveImportFile": "Import File into Resolve",
+    "SecondUnitPrompt": "Write Video Prompt",
 }

@@ -87,6 +87,12 @@ instead of re-grabbing. Press the button again only when you want fresh media.
 | **Send to Resolve** | *Send to Resolve* | saves picture / video / sound / subtitles and imports them |
 | **Import File into Resolve** | none | any file already on disk; pairs with ComfyUI's own Save nodes |
 
+**Write**
+
+| Node | Does |
+|---|---|
+| **Write Video Prompt** | expands a short brief into a finished Minimax or LTX prompt, using your text encoder |
+
 `second frame` on **Grab Frames from Resolve** decides the shape: off is a
 plain one-picture loader, on is a first/last pair for video models. Each slot
 fills three ways that mix freely: grab from the timeline at the playhead, grab
@@ -144,6 +150,7 @@ browser):
 |---|---|
 | `Minimax_FFLF` | First and last frame video with Minimax, lands back in the gap. |
 | `Minimax_I2V` | Image to video with Minimax, straight to Resolve. |
+| `Minimax_R2V` | Reference to video with Minimax, straight to Resolve. |
 | `Minimax_T2V` | Text to video with Minimax, straight to Resolve. |
 | `LTX_FFLF` | First and last frame video with LTXV, lands back in the gap. |
 | `LTX_I2V` | Image to video with LTXV, straight to Resolve. |
